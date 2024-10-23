@@ -1,57 +1,370 @@
-* {
-  box-sizing: border-box;
+/* RESET */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+/*body {
+  line-height: 1;
+}*/
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-spacing: 0;  
+  border-collapse: collapse;
+}
+
+
+/* GENERAL STYLES */
+
+/* Global */
+html {
+  font-size: 18px;
 }
 
 body {
+  padding: 1rem;
+  font-family: $font-family-sans-serif;
+  line-height: 1.6;
+  background-color: adjust-color($base-color, 35%);
+}
+
+i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+/* Header */
+.header {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
-}
-
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
+  margin-bottom: 0.5rem;
   text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  &__logo img {
+    width: 5rem;
+    height: auto;
+  }
+
+  &__title {
+    margin-top: 0.5rem;
+    font-size: 3rem;
+  }
 }
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
+/* Navigation */
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  background-color: adjust-color($base-color, -50%);
+
+  &__toggle {
+    display: block;
+    font-size: 2rem;
+    color: adjust-color($base-color, 50%);
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  &__list {
+    display: none;
+  }
+
+  &__list--active {
+    position: absolute;
+    top: 18rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0.5rem 0;
+    margin: 0 1rem;
+    background-color: adjust-color($base-color, -25%);
+  }
+
+  &__item {
+    margin: 0.5rem 0;
+  }
+
+  &__link {
+    padding: 0.5rem;
+    font-weight: bold;
+    color: $primary-link-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }  
+}
+/* Search Form */
+.search {
+  display: flex;
+  align-items: center;
+
+  &__label {
+    padding: 0.25rem 0.5rem 0.5rem;
+  }
+
+  &__input {
+    padding: 0.3rem;
+    border: 1px solid adjust-color($base-color, 20%);
+    border-radius: 0.25rem;
+  }
+
+  &__button {
+    padding: 0.3rem;
+    margin-right: 0.5rem;
+    color: adjust-color($base-color, 50%);
+    cursor: pointer;
+    background-color: adjust-color($base-color, -10%);
+    border: none;
+    border-radius: 0.3rem;
+  
+    &:hover {
+      background-color: adjust-color($base-color, -30%);
+    }
+  }
+  
+  &--highlight {
+    background-color: #FF0;
+  }
+}
+
+.fa-magnifying-glass {
+  font-size: 1.1rem;
+}
+
+/* Slick Carousel */
+.carousel__image {
+  max-width: 100%;
   height: auto;
+}
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+/* Layout (Main and Aside) */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Main */
+.content__subheading,
+.newsletter__title,
+.aside__title {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.content {
+  padding: 1rem;
+  background-color: adjust-color($base-color, 50%);
+  border-radius: 0.3rem;
+
+  &__heading {
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+  }
+
+  &__text {
+    margin: 1rem 0;
+    font-family: $font-family-serif;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__image--pointer {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  &__image--pointer.zoom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    cursor: zoom-out;
+    object-fit: contain;
   }
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+  &__text {
+    margin: 1rem 0;
+    font-family: $font-family-serif;
+    font-size: 0.8rem;
+  }
+
+  &__input {
+    padding: 0.3rem;
+    border: 1px solid adjust-color($base-color, 20%);
+    border-radius: 0.25rem;
+  }
+
+  &__button {
+    padding: 0.3rem;
+    margin-right: 0.5rem;
+    color: adjust-color($base-color, 50%);
+    cursor: pointer;
+    background-color: adjust-color($base-color, -10%);
+    border: none;
+    border-radius: 0.3rem;
+ 
+    &:hover {
+      background-color: adjust-color($base-color, -30%);
+    }
   }
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
+/* Aside */
+.aside {
+  height: fit-content;
+  padding: 0.5rem;
+  background-color: adjust-color($base-color, 25%);
+  border-radius: 0.3rem;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 0.5rem;
+  }
+
+  &__link {
+    color: $secondary-link-color;
+    text-decoration: none;
+  }
+}
+
+/* Footer */
+.footer {
+  padding: 0.5rem 0;
   text-align: center;
+  background-color: adjust-color($base-color, -50%);
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin: 0.3rem 0;
+  }
+
+  &__link {
+    color: $primary-link-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__text {
+    margin-right: 1rem;
+    font-size: 0.5rem;
+    color: adjust-color($base-color, 50%);
+    text-align: right;
+  }
+}
+
+/* MEDIA QUERIES */
+
+/* Tablets and desktop (>768px) */
+@media (min-width: 768px) {
+  
+  /* Header */
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+
+    &__logo {
+      margin-right: 1rem;
+    }
+
+    &__title {
+      margin: 0 auto;
+    }
+  }
+
+  /* Navigation */
+  .nav {
+
+    &__toggle {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      list-style: none;
+    }
+
+    &__item {
+      margin: 0 1rem;
+    }
+  }
+
+  /* Layout (Main and Aside) */
+  .layout {
+    grid-template-columns: 3fr 1fr;
+  }
 }
