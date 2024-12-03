@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de contacto</title>
+    <link rel="stylesheet" type="text/css" href="index.3377c607.css">
+    <script src="index.abdb1b70.js" defer=""></script>
+  </head>
+  <body>
+    
+    <!-- Header -->
+    <!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Menú de navegación</title>
+  </head>
+  <header class="header">
+    <div class="container-fluid d-flex justify-content-between align-items-center border-bottom">
+      <img class="header__logo" src="JNIC-logo.64bd062d.png" alt="Logo">
+      <nav class="header__nav">
+        <a href="index.html" class="mx-3">Inicio</a>
+        <a href="page2.html" class="mx-3">Ponencias</a>
+        <a href="page3.html" class="mx-3">Nota de prensa</a>
+        <a href="page4.html" class="mx-3">Contacto</a>
+      </nav>
+    </div>
+  </header>
+</html>
+
+
+    <!-- Breadcrumb -->
+    <!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Menú de navegación</title>
+  </head>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+      <li class="breadcrumb-item active" id="current-page" aria-current="page"></li>
+    </ol>
+  </nav>
+  <script>const currentPage = document.getElementById("current-page");
+currentPage.textContent = document.title;
+
+</script>
+</html>
+
+    
+    <main class="row justify-content-center mb-3">
+      <h1 class="display-1 text-center my-3">Formulario de contacto</h1>
+      <div class="col-lg-6 col-md-8">
+        <form action="submit_form.php" method="POST" class="p-4 border rounded bg-light shadow-sm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre y apellidos <span class="text-danger">*</span></label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Introduce tu nombre y apellidos" aria-required="true" required="">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico <span class="text-danger">*</span></label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu correo electrónico" aria-required="true" required="">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Teléfono</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-phone"></i></span>
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="Introduce tu número de teléfono">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje <span class="text-danger">*</span></label>
+            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí" aria-required="true" required=""></textarea>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Enviar mensaje
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pie de página</title>
+  </head>
+  <footer class="footer">
+    <div class="container bg-light d-flex justify-content-between align-items-center text-info-500">
+      <img class="footer__logo" src="JNIC-logo.64bd062d.png" alt="Logo">
+      <nav class="footer__nav">
+        <a href="index.html" class="footer__nav--link mx-3">Inicio</a>
+        <a href="page2.html" class="footer__nav--link mx-3">Ponencias</a>
+        <a href="page3.html" class="footer__nav--link mx-3">Nota de prensa</a>
+        <a href="page4.html" class="footer__nav--link mx-3">Contacto</a>
+      </nav>
+      <div class="footer__social d-flex justify-content-start">
+        <a href="#" class="mx-2"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="mx-2"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="container-fluid bg-primary d-flex align-items-start text-start">
+      <img class="footer__logo" src="uoc-logo.431e5d9c.png" alt="UOC Logo">
+      <div class="footer__copyright text-light">
+        <p lang="en">
+          This wireframe has been created exclusively for its use within the “HTML and CSS Tools II” course at the UOC's Master Program in Website and Web App Development. Its reproduction and other uses are not authorized.
+        </p>
+        <p lang="en">&copy; December 2024 - Miguel Fernández Martín and Universitat Oberta de Catalunya.</p>
+      </div>
+    </div>
+  </footer>
+</html>
+
+
+  </body>
+</html>

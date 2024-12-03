@@ -1,0 +1,33 @@
+// Styles for utility classes
+@use '../variables' as *;
+
+@layer utilities {
+  // Nota de prensa
+  .article__section {
+    &:has(ul) {
+      padding: 1rem;
+      background-color: lighten($primary, 40%);
+      border: 2px dashed $primary;
+    }
+  }
+  :is(blockquote, cite) {
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: adjust-color($dark, 25%);
+    background-color: adjust-color($primary, 50%);
+    border-left: 4px solid adjust-color($primary, 25%);
+  }
+  /*
+  blockquote {
+    &:has(.author) {
+      padding: 1rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: adjust-color($dark, 25%);
+      background-color: adjust-color($primary, 50%);
+      border-left: 4px solid adjust-color($primary, 25%);
+    }
+  }
+  */  
+}

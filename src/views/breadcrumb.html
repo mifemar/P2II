@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Menú de navegación</title>
+  </head>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+      <li class="breadcrumb-item active" id="current-page" aria-current="page"></li>
+    </ol>
+  </nav>
+  <script>
+    const currentPage = document.getElementById('current-page');
+    currentPage.textContent = document.title;
+  </script>
+</html>

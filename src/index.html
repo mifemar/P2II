@@ -1,125 +1,39 @@
 <!DOCTYPE html>
-
 <html lang="es">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedrajas de San Esteban</title>
+    <title>Página de inicio</title>
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
     <script type="module" src="./assets/scripts/main.js"></script>
   </head>
   <body>
-
+    
     <!-- Header -->
     <include src="./views/header.html"></include>
-
-    <!-- Navigation Menu -->
-    <include src="./views/nav.html"></include>
-
-    <!-- Slick Carousel -->
-    <div class="carousel">
-      <div><img src="./assets/images/pedrajas1.jpg" class="carousel__image" alt="Panorámica de Pedrajas de San Esteban desde su monte"></div>
-      <div><img src="./assets/images/pedrajas2.jpeg" class="carousel__image" alt="Plaza mayor del pueblo"></div>
-      <div><img src="./assets/images/pedrajas3.jpeg" class="carousel__image" alt="Calle Real Nueva"></div>
-      <div><img src="./assets/images/pedrajas4.jpg" class="carousel__image" alt="Iglesia parroquial de San Esteban Protomártir"></div>
-      <div><img src="./assets/images/pedrajas5.jpg" class="carousel__image" alt="Estatua al piñero en el pinar de Sacedón"></div>
-    </div>
-
-    <!-- Layout (Main and Aside) -->
-    <div class="layout">
-      <!-- Main content -->
-      <main>
-        <section id="content" class="content">
-          <h2 class="content__heading">Bienvenidos</h2>
-          <p class="content__text">
-            Pedrajas de San Esteban es un municipio ubicado en la provincia de Valladolid, 
-            en la comunidad autónoma de Castilla y León (España). Es conocido principalmente 
-            por su tradición agrícola, en especial por el cultivo del piñón, una 
-            semilla muy valorada que se extrae del pino piñonero (<i lang="la">Pinus pinea</i>). De hecho, 
-            Pedrajas de San Esteban es considerado uno de los principales productores de 
-            piñones en España, lo que le ha otorgado el apodo de "<strong>Capital del piñón</strong>".
-          </p>
-          <picture>
-            <source srcset="./assets/images/ayuntamiento.jpeg?as=webp" type="image/webp">
-            <img src="./assets/images/ayuntamiento.jpeg" alt="Ayuntamiento de Pedrajas de San Esteban" class="content__image">
-          </picture>
-          <h3 class="content__subheading">Historia</h3>
-          <p class="content__text">
-            La historia de Pedrajas de San Esteban está ligada al paso de diferentes civilizaciones, 
-            como ocurre en muchas otras localidades de Castilla y León. Durante la Edad Media, la zona fue 
-            repoblada tras la Reconquista y comenzó a tomar forma como un asentamiento rural con 
-            economía basada en la agricultura y la ganadería.<br>
-            El nombre del municipio está vinculado al mártir San Esteban, que es el santo patrón del pueblo, 
-            y a la vez, "Pedrajas" se refiere a la causa de su muerte, ya que fue lapidado a las afuera 
-            de Jerusalén por los sanedritas.
-          </p>
-          <h3 class="content__subheading">Economía</h3>
-          <p class="content__text">
-            El cultivo de piñones es la actividad económica más destacada. Los pinares de la 
-            zona son parte integral del paisaje, y el trabajo con los piñones ha generado una 
-            industria local que va desde la recolección y procesado hasta la exportación. Este 
-            producto es muy apreciado tanto en la cocina tradicional española como en la 
-            internacional, por lo que el cultivo y comercialización de piñones tiene un importante 
-            valor económico para Pedrajas de San Esteban.<br>
-            Además de la producción de piñones, la agricultura, en general, y la ganadería también 
-            juegan un papel importante en la economía local.
-          </p>
-          <h3 class="content__subheading">Festividades y cultura</h3>
-          <p class="content__text">
-            Pedrajas de San Esteban cuenta con varias celebraciones a lo largo del año, siendo 
-            una de las más importantes las fiestas en honor a San Agustín, que tienen lugar a 
-            finales de agosto. Durante estas fiestas, el pueblo organiza actividades como encierros, 
-            verbenas, concursos y procesiones religiosas. Otra festividad destacada es la Semana 
-            Santa, que se celebra con gran fervor religioso, como en muchas otras localidades de la región.<br>
-            También es común en Pedrajas que se celebren eventos relacionados con el piñón, como ferias 
-            o jornadas gastronómicas, que buscan poner en valor este fruto tan emblemático de la zona.
-          </p>
-          <h3 class="content__subheading">Patrimonio</h3>
-          <p class="content__text">
-            Aunque es una localidad pequeña, Pedrajas de San Esteban cuenta con algunos puntos de 
-            interés histórico y arquitectónico. Entre ellos destacan la <strong>Iglesia Parroquial 
-            de San Esteban Protomártir</strong>, que data de los siglos XV y XVI, y la <strong>Ermita 
-            del Cristo del Humilladero</strong>, lugar de devoción local. Además, el entorno natural
-            de la zona, con sus pinares, es ideal para actividades al aire libre como el senderismo.<br>
-            En resumen, Pedrajas de San Esteban es un pueblo que combina la riqueza de su tradición 
-            agrícola con su patrimonio cultural, manteniendo vivas costumbres locales que atraen 
-            tanto a visitantes como a residentes.
-          </p>
-        </section>
-        
-        <section class="newsletter">
-          <h3 class="newsletter__title">Suscríbete a nuestro boletín</h3>
-          <p class="newsletter__text">Recibe las últimas noticias y actualizaciones sobre 
-            Pedrajas de San Esteban en tu correo electrónico.</p>
-          <form id="newsletterForm" class="newsletter__form">
-            <label for="email" class="newsletter__label">
-              <input type="email" id="email" name="email" class="newsletter__input" placeholder="Introduce tu correo" aria-required="true" required>
-            </label>
-            <button type="submit" class="newsletter__button">Suscribirme</button>
-          </form>
-          <p class="newsletter__text" id="responseMessage"></p>
-        </section>
-      </main>
-
-      <!-- Aside -->
-      <aside class="aside">
-        <h3 class="aside__title">Información útil</h3>
-        <ul class="aside__list">
-          <li class="aside__item"><a href="#" class="aside__link">Festividades locales</a></li>
-          <li class="aside__item"><a href="#" class="aside__link">Alojamiento rural</a></li>
-          <li class="aside__item"><a href="#" class="aside__link">Tapas y pinchos</a></li>
-          <li class="aside__item"><a href="#" class="aside__link">Municipios hermanados</a></li>
-        </ul>
-        <p>Localización</p>
-        <picture>
-          <source srcset="./assets/images/localizacion.png?as=webp" type="image/webp">
-          <img src="./assets/images/localizacion.png" alt="Localización de Pedrajas de San Esteban en España" id="zoomImage" class="content__image--pointer" tabindex="0">
-        </picture>
-      </aside>
-    </div>
-    <!-- layout End -->
+    
+    <main class="grid-container">
+      <h1 class="grid-container__title">Jornadas Nacionales de Investigación en Ciberseguridad</h1>
+      <h2 class="grid-container__subtitle"><abbr title="Jornadas Nacionales de Investigación en Ciberseguridad">JNIC</abbr></h2>
+      <hr class="grid-container__line">
+      <p class="grid-container__text">
+        Las <strong>Jornadas Nacionales de Investigación en Ciberseguridad</strong> (JNIC) es un congreso científico que sirve de punto de encuentro donde los diversos actores que trabajan en el ámbito de la investigación en ciberseguridad (universidades, centros tecnológicos y de investigación, empresas, y administración pública) pueden intercambiar conocimiento y experiencias con el objetivo común de potenciar la investigación en el ámbito de la ciberseguridad a nivel nacional.
+      </p>
+      <div class="grid-container__extra-text" id="extra-text" style="display: none;">
+        <p>Las necesidad de realizar unas jornadas de estas características se identificó durante la realización del estudio de viabilidad, oportunidad y diseño de una red de centros de excelencia I+D+i en ciberseguridad,​ con el consenso de todos los participantes.</p>
+        <p>El <strong>plan estratégico</strong> generado para esta Red de Excelencia Nacional de Investigación en Ciberseguridad, incluía en la <i>medida 17</i>, la creación de las jornadas nacionales de I+D+i en ciberseguridad con el objetivo de ser el punto de encuentro científico en el que tanto la Red de Excelencia Nacional de Investigación en Ciberseguridad en particular, como el ecosistema investigador en general, puedan mostrar las capacidades tanto en conocimiento y talento como en resultados de investigación y su potencial de transferencia al mercado.</p>
+        <p>Igualmente dicho estudio en la <i>medida 12</i> proponía convocar premios a la investigación de excelencia, diseñando una convocatoria abierta con mecanismos de evaluación y selección de candidaturas.</p>
+      </div>
+      <a class="grid-container__more-text" href="javascript:void(0)" id="toggle-link">Leer más</a>
+      <img class="grid-container__image" src="./assets/images/portada.webp" alt="IX Jornadas Nacionales de Investigación en Ciberseguridad 2024">
+      <div class="grid-container__location">
+        <p>27 de junio de 2024<br><abbr title="Escuela Técnica Superior de Ingeniería Informática">ETSII</abbr> de la Universidad de Sevilla</p>
+      </div>
+      <a class="grid-container__more-info" href="https://es.wikipedia.org/wiki/Jornadas_Nacionales_de_Investigaci%C3%B3n_en_Ciberseguridad#" target="_blank" role="button">Más información</a>
+    </main>
 
     <!-- Footer -->
     <include src="./views/footer.html"></include>
+  
   </body>
 </html>

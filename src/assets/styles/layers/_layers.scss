@@ -1,0 +1,19 @@
+/**
+ * Import layers
+ * Layers are the building blocks of your application.
+ * They are the smallest pieces of code that can be reused.
+ * Layers are divided into 4 categories:
+ * - Reset: CSS reset
+ * - Base: base styles
+ * - Components: reusable components
+ * - Utilities: utility classes
+ */
+
+@use '../variables' as *;
+
+@use 'reset' as *;
+@use 'base' as *;
+@use 'components' as *;
+@use 'utilities' as *;
+
+@layer reset, base, components, utilities;

@@ -1,0 +1,42 @@
+// Global styles
+@use '../variables' as *;
+
+@layer base {
+  body {
+    font-family: $font-family-sans-serif;
+    color: $primary;
+    background-color: $light;
+    & h1 {
+      font-family: $font-family-serif;
+      color: $primary;
+    }
+    & strong, & b {
+      font-weight: bold;
+    }
+    & em, & i {
+      font-style: italic;
+    }
+    & small {
+      font-size: 0.8rem;
+    }
+  }
+
+  // Ponencias
+  .flex-container {
+    container-type: inline-size;
+    container-name: main-content;
+    padding: 0 2rem;
+    margin: 1rem auto;
+  }
+
+  // Nota de prensa
+  .article {
+    container-type: inline-size;
+    container-name: main-content;
+    max-width: 50%;
+    padding: 0 1rem 1rem;
+    margin: 1rem auto;
+    background-color: $light;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}

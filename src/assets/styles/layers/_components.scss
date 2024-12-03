@@ -1,0 +1,65 @@
+// Styles for components
+@use '../variables' as *;
+
+@layer components {
+  // Ponencias
+  .speakers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    &__card {
+      width: 20rem;
+      padding: 1rem;
+      text-align: center;
+      background-color: $light;
+      border: 1px solid $secondary;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    &__photo {
+      width: 15rem;
+      height: 20rem;
+      margin-bottom: 1rem;
+      border-radius: 50%;
+    }
+    &__name {
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+    &__description {
+      font-size: 0.9rem;
+      color: $dark;
+    }
+    &__description p {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  // Nota de prensa
+  .article {
+    &__section {
+      margin-bottom: 2rem;
+      &--subtitle {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        text-align: center;
+      }
+      &--image {
+        display: block;
+        max-width: 100%;
+        margin: 1rem auto;
+        border-radius: 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      }
+      &--text {
+        margin-bottom: 1.5rem;
+        text-align: justify;
+      }
+      &--list {
+        padding-left: 1.5rem;
+        list-style: circle;
+      }
+    }
+  }
+}

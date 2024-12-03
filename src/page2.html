@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponencias</title>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <include src="./views/header.html"></include>
+
+    <!-- Breadcrumb -->
+    <include src="./views/breadcrumb.html"></include>
+
+    <main class="flex-container">
+      <h1 class="display-1 text-center my-3">Ponentes de las Jornadas</h1>
+      <div class="speakers">
+        <div class="speakers__card">
+          <picture>
+            <source srcset="./assets/images/speaker1.jpg?as=webp" type="image/webp">
+            <img class="speakers__photo" src="./assets/images/speaker1.jpg" alt="Dr. Marcos Santamaría">
+          </picture>
+          <h2 class="speakers__name">Dr. Marcos Santamaría</h2>
+          <div class="speakers__description">
+            <p>Especialista en inteligencia artificial aplicada a la ciberseguridad y detección de fraudes en sistemas financieros.</p>
+            <p>Ponente habitual en conferencias globales como Black Hat y DEF CON.</p>
+            <p>Cuenta con más de 15 años de experiencia en desarrollo de sistemas para empresas Fortune 500.</p>
+          </div>
+        </div>
+        <div class="speakers__card">
+          <picture>
+            <source srcset="./assets/images/speaker2.jpg?as=webp" type="image/webp">
+            <img class="speakers__photo" src="./assets/images/speaker2.jpg" alt="Dra. Claudia Ríos">
+          </picture>
+          <h2 class="speakers__name">Dra. Claudia Ríos</h2>
+          <div class="speakers__description">
+            <p>Reconocida por su investigación en seguridad en <abbr lang="en" title="Internet of Things">IoT</abbr> y dispositivos médicos.</p>
+            <p>Consultora para organismos gubernamentales en estrategias de seguridad nacional digital.</p>
+            <p>Su trabajo ha sido publicado en revistas científicas de prestigio como "Cyber Defense Journal".</p>
+          </div>
+        </div>
+        <div class="speakers__card">
+          <picture>
+            <source srcset="./assets/images/speaker3.jpg?as=webp" type="image/webp">
+            <img class="speakers__photo" src="./assets/images/speaker3.jpg" alt="Dr. Javier Montes">
+          </picture>
+          <h2 class="speakers__name">Dr. Javier Montes</h2>
+          <div class="speakers__description">
+            <p>Investigador líder en el desarrollo de sistemas de detección de intrusos basados en aprendizaje automático.</p>
+            <p>Ha trabajado en proyectos para proteger redes corporativas de alto perfil.</p>
+            <p>Autor de más de 40 artículos sobre seguridad en redes y criptografía distribuida.</p>
+          </div>
+        </div>
+        <div class="speakers__card">
+          <picture>
+            <source srcset="./assets/images/speaker4.jpg?as=webp" type="image/webp">
+            <img class="speakers__photo" src="./assets/images/speaker4.jpg" alt="Dra. Ana Beltrán">
+          </picture>
+          <h2 class="speakers__name">Dra. Ana Beltrán</h2>
+          <div class="speakers__description">
+            <p>Directora de ciberseguridad en una empresa líder de telecomunicaciones y defensora de la inclusión digital segura.</p>
+            <p>Es cofundadora de la iniciativa "Ciberseguridad para Todos", que promueve la educación en seguridad informática.</p>
+            <p>Recibió el premio "Innovación en Seguridad Digital" en 2021.</p>
+          </div>
+        </div>
+        <div class="speakers__card">
+          <picture>
+            <source srcset="./assets/images/speaker5.jpg?as=webp" type="image/webp">
+            <img class="speakers__photo" src="./assets/images/speaker5.jpg" alt="Dr. Ricardo Palacios">
+          </picture>
+          <h2 class="speakers__name">Dr. Ricardo Palacios</h2>
+          <div class="speakers__description">
+            <p>Experto en el análisis de <i lang="en">malware</i> avanzado y respuesta a incidentes críticos.</p>
+            <p>Ha formado equipos internacionales para investigar cibercrímenes de alto impacto.</p>
+            <p>Su experiencia incluye colaborar con Interpol en operaciones de ciberdefensa global.</p>
+          </div>
+        </div>
+        <div class="speakers__card">
+          <picture>
+            <source srcset="./assets/images/speaker6.jpg?as=webp" type="image/webp">
+            <img class="speakers__photo" src="./assets/images/speaker6.jpg" alt="Dr. Eleno Vega">
+          </picture>
+          <h2 class="speakers__name">Dr. Eleno Vega</h2>
+          <div class="speakers__description">
+            <p>Experto en ciberseguridad avanzada y análisis de vulnerabilidades.</p>
+            <p>Profesor e investigador en la Universidad Internacional de Tecnología y autor de varios libros sobre criptografía moderna.</p>
+            <p>Ha liderado proyectos internacionales para proteger infraestructuras críticas frente a ciberataques.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <include src="./views/footer.html"></include>
+
+  </body>
+</html>
